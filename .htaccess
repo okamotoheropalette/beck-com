@@ -1,0 +1,5 @@
+AuthUserFile /home/users/1/schoolbus.jp-jecsa/web/beck-com/.htpasswd
+AuthGroupFile /dev/null
+AuthName "閲覧権限"
+AuthType Basic
+require valid-user

@@ -244,6 +244,10 @@ nav.scrolled {
   margin-bottom: 32px;
   opacity: 0;
   animation: fadeUp 0.8s 0.2s forwards;
+  @media screen and (max-width: 750px) {
+    font-size: 0.6rem;
+    
+  }
 }
 
 .hero-badge::before {
@@ -476,7 +480,7 @@ section {
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2px;
   margin-top: 60px;
 }
@@ -512,7 +516,7 @@ section {
 .why-num {
   font-family: var(--font-display);
   font-size: 5rem;
-  color: rgba(255,20,147,0.08);
+  color: var(--pink-glow);
   position: absolute;
   top: 20px;
   right: 24px;
@@ -542,6 +546,9 @@ section {
 /* ===== PLANS ===== */
 #plans {
   padding: 120px 60px;
+  @media screen and (max-width: 750px) {
+    padding: 60px 20px;
+  }
 }
 
 .plans-header {
@@ -553,6 +560,11 @@ section {
   justify-content: center;
 }
 
+.plans-header .section-title {
+  @media screen and (max-width: 750px) {
+    font-size:30px;
+  }
+}
 .plans-header .section-tag::before { display: none; }
 
 .plans-grid {
@@ -722,8 +734,21 @@ section {
   margin: 0 auto;
 }
 
+.about-inner .section-title {
+  @media screen and (max-width: 750px) {
+    font-size:30px;
+  }
+}
+
+.about-inner .section-title {
+  font-size:80px;
+  @media screen and (max-width: 750px) {
+    font-size:30px;
+  }
+}
+
 .about-intro {
-  max-width: 700px;
+  max-width: 800px;
   margin-bottom: 80px;
 }
 
@@ -777,6 +802,17 @@ section {
   object-position: center top;
   filter: grayscale(30%);
   transition: filter 0.3s;
+}
+
+.daiki_img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.ito_img{
+  max-height: 100%;
+  width: auto;
+  display: block;
 }
 
 .team-card:hover .team-photo { filter: grayscale(0); }
@@ -878,6 +914,13 @@ section {
 }
 .apply-inner .section-tag::before { display: none; }
 
+.apply-inner .section-title {
+  @media screen and (max-width: 750px) {
+    font-size:30px;
+    
+  }
+}
+
 .apply-desc {
   font-size: 1.05rem;
   line-height: 1.8;
@@ -908,6 +951,12 @@ section {
 .tokushoho-inner {
   max-width: 900px;
   margin: 0 auto;
+}
+
+.tokushoho-inner .section-title {
+  @media screen and (max-width: 750px) {
+    font-size:28px;
+  }
 }
 
 .toku-table {
@@ -1070,7 +1119,12 @@ footer {
   .nav-links.open { right: 0; }
   .hamburger { display: flex; z-index: 101; }
 
-  #home, section, #why, #about, #apply, #tokushoho { padding: 80px 32px; }
+  #home, section, #why, #about, #apply, #tokushoho {
+    padding: 80px 32px;
+    @media screen and (max-width: 750px) {
+      padding: 40px 15px;
+    }
+  }
 
   .hero-title { font-size: clamp(4rem, 15vw, 7rem); }
   .hero-stats { gap: 32px; flex-wrap: wrap; }
